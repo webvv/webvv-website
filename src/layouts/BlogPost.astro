@@ -1,9 +1,12 @@
 ---
 import '../styles/global.css'
-import BrandBox from '../components/BrandBox.astro'
-import ArticlesBox from '../components/ArticlesBox.astro'
----
+import '../styles/blog.css'
+import type { CollectionEntry } from 'astro:content';
 
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, author, publishDate} = Astro.props;
+---
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -19,8 +22,10 @@ import ArticlesBox from '../components/ArticlesBox.astro'
 	</head>
 	<body>
 		<main>
-			<BrandBox />
-			<ArticlesBox />
+			<h1 id="blog-title">{title}</h1>
+			<span id="blog-author">{author}</span>
+			<span id="blog-date">{publishDate}</span>
+			<slot />
 		</main>
 	</body>
 </html>

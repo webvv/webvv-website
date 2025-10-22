@@ -1,0 +1,64 @@
+---
+export interface Props {
+  id: string;
+  title: string;
+  description: string;
+  author: string;
+  publishDate: string;
+}
+
+const { 
+  id,
+  title,
+  description, 
+  author,
+  publishDate
+} = Astro.props as Props;
+---
+<style>
+  article {
+    text-align: left;
+    border-bottom: var(--line-border-lite) 1px solid;
+    margin: 16px;
+    padding: 16px;
+
+    &:last-of-type {
+      border: 0px
+    }
+  
+    div {
+      display: flex;
+
+      h3 {
+        flex-grow: 1;
+      }
+
+      span {
+        color: var(--text-3);
+        font-size: 18px;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 1.052em;
+
+    &:before {
+      content: '#';
+      display: inline-block;
+      margin-right: 8px;
+      color: var(--accent);
+    }
+  }
+
+  p {
+    color: var(--text-3)
+  }
+</style>
+<article>
+  <div>
+    <h3><a href={`/blog/${id}`}>{title}</a></h3>
+    <span class="article-publish-date">{publishDate}</span>
+  </div>
+  <p>{description}</p>
+</article>

@@ -1,0 +1,82 @@
+:root {
+  /* Primary / Accent */
+  --accent: #81DEE5;
+  --accent-lite: rgb(171, 237, 242);
+  /* --accent-lite: rgb(126,142,255); */
+  --accent-dark: rgb(47,58,238);
+  
+  /* Backgrounds & Surfaces (dark-compatible) */
+  --background: rgb(40,44,53);
+  --surface: rgb(50,54,62);
+  --surface-lite: rgb(59,64,74);
+  --surface-dark: rgb(33,36,40);
+  
+  /* Neutrals / Text */
+  --text: rgb(230,233,238);
+  --text-2: rgb(201,205,211);
+  --text-3: rgb(154,160,168);
+  --text-disable: rgb(111,117,124);
+  
+  /* Subtle UI & Borders */
+  --line-dark: rgb(31,34,38);
+  --line-border-dark: rgb(45,49,55);
+  --line-border-lite: rgb(64,70,89);      /* soft border, input bg */
+  --line-accent: #82dde44d;          /* accent border tint */
+  
+  /* Hover / Focus States */
+  --hover-accent: rgb(69,92,248);         /* hover on accent */
+  --focus: rgb(106,121,255);              /* focus glow */
+  --hover-dark: rgb(51,64,153);           /* subtle hover darker */
+
+  /* Success / Warning / Error */
+  --success: rgb(46,204,113);
+  --warning: rgb(255,184,107);
+  --error: rgb(255,107,107);
+  
+  /* Muted / Pastel Complements */
+  --muted: rgb(137,163,255);
+  --muted-lite: rgb(169,184,255);
+  --muted-accent: rgb(107,212,255);       /* teal-cool accent */
+  --muted-green: rgb(154,230,200);        /* soft green */
+  
+  /* High-contrast accents (sparingly) */
+
+  --warm-highlight: rgb(255,209,102);     /* warm highlight */
+  --magneta-pop: rgb(255,110,199);        /*magenta pop */
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+	line-height: 1.7;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 0.5rem 0;
+	color: var(--color);
+	line-height: 1.2;
+}
+
+a {
+	color: var(--text-1);
+
+  &:hover {
+  	color: var(--accent);
+  }
+}
+
+h1 {
+  font-size: 41.04px;
+}
