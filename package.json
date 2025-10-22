@@ -1,7 +1,10 @@
 {
-  "name": "flaky-field",
+  "name": "webvv-website",
   "type": "module",
   "version": "0.0.1",
+  "author": {
+    "name": "Sahand Javid"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
